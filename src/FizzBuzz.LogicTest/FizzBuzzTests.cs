@@ -40,5 +40,13 @@ namespace FizzBuzz.LogicTest
             var expected = _sut.FizzBuzz(number);
             expected.Should().Be("Buzz");
         }
+
+        [Fact]
+        public void If_number_is_not_devided_to_15_3_5_say_Error()
+        {
+            var number = 11;
+            var expected = _sut.FizzBuzz(number);
+            expected.Should().Be("Error");
+        }
     }
 }
