@@ -33,5 +33,12 @@ namespace FizzBuzz.LogicTest
             expected.Should().Be("Fizz");
         }
 
+        [Fact]
+        public void If_number_is_devided_to_5_say_Buzz()
+        {
+            var number = 10;
+            var expected = _sut.FizzBuzz(number);
+            expected.Should().Be("Buzz");
+        }
     }
 }
