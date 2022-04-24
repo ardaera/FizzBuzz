@@ -1,9 +1,11 @@
 ﻿using FizzBuzzGame;
+using FluentAssertions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xunit;
 
 namespace FizzBuzz.LogicTest
 {
@@ -13,6 +15,13 @@ namespace FizzBuzz.LogicTest
         public FizzBuzzTests()
         {
             _sut = new FizzBuzzLogic(); 
+        }
+        [Fact]  
+        public void If_number_is_devided_to_15_say_FizzBuzz()
+        {
+            var number = 30;
+            var expected = _sut.FizzBuzz(number);
+            expected.Should().Be("FizzBuzz");
         }
     }
 }
