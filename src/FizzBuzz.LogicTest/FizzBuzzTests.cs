@@ -16,6 +16,7 @@ namespace FizzBuzz.LogicTest
         {
             _sut = new FizzBuzzLogic(); 
         }
+
         [Fact]  
         public void If_number_is_devided_to_15_say_FizzBuzz()
         {
@@ -23,5 +24,14 @@ namespace FizzBuzz.LogicTest
             var expected = _sut.FizzBuzz(number);
             expected.Should().Be("FizzBuzz");
         }
+
+        [Fact]
+        public void If_number_is_devided_to_3_say_Fizz()
+        {
+            var number = 9;
+            var expected = _sut.FizzBuzz(number);
+            expected.Should().Be("Fizz");
+        }
+
     }
 }
